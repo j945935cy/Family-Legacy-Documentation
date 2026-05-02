@@ -42,6 +42,28 @@ const familyPeople = [
     image: "images/person-granddaughter2.png",
     quote: "最喜歡聽阿公講以前的故事了！",
     description: "林志遠與秀英的小孫女，目前還在就學中。活潑好動的她，是家裡的開心果。每次家庭聚餐時，她總是纏著阿公阿嬤講以前在市場開雜貨店的故事。她的存在，為這個歷經奮鬥的家族帶來了輕鬆與歡笑。"
+  },
+  {
+    id: 5,
+    name: "林偉明",
+    englishName: "Lin Wei-Ming",
+    birthYear: "1960",
+    role: "家族第二代接班人",
+    location: "台南",
+    image: "images/person-dad.png",
+    quote: "把家傳下去，不僅僅是留下一家店，更是傳遞一份責任。",
+    description: "林志遠與秀英的長子。從小看著父母在雜貨店忙碌的背影長大，深知創業的艱辛。大學畢業後曾在北部科技業工作，後來決定回到台南接手家族事業，並將傳統店面轉型現代化經營。他遺傳了父親的沉穩與母親的細心，是家族承先啟後的重要支柱。"
+  },
+  {
+    id: 6,
+    name: "陳淑芬",
+    englishName: "Chen Shu-Fen",
+    birthYear: "1962",
+    role: "家族第二代的後盾",
+    location: "台南",
+    image: "images/person-mom.png",
+    quote: "只要一家人的心還繫在一起，再大的困難都不怕。",
+    description: "林偉明的妻子，林佳穎與林佳欣的母親。個性溫柔但堅韌，在林偉明接手家族事業轉型最困難的時期，給予了最大的包容與支持。她是維繫三代同堂家庭和諧的關鍵人物，總是能用溫暖的話語化解家庭間的小摩擦。"
   }
 ];
 
