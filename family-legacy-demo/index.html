@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我們家的故事 — 林志遠家族</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">林志遠家族</a>
+      <button class="hamburger" aria-label="選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar-links">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="stories.html">家族故事</a></li>
+        <li><a href="people.html">家族人物</a></li>
+        <li><a href="timeline.html">家族年表</a></li>
+        <li><a href="values.html">家族價值</a></li>
+        <li><a href="gallery.html">照片牆</a></li>
+        <li><a href="about.html">關於本站</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="hero-kicker">家族故事示範網站</div>
+          <h1>我們家的故事</h1>
+          <p class="hero-subtitle">把記憶留下，把精神傳下去</p>
+          <p class="hero-narrative" id="hero-narrative"></p>
+          <div class="hero-quote-panel" id="hero-quote-panel"></div>
+          <div class="hero-buttons">
+            <a href="stories.html" class="btn btn-primary">閱讀家族故事</a>
+            <a href="people.html" class="btn btn-outline">認識家族人物</a>
+            <a href="timeline.html" class="btn btn-outline">查看家族年表</a>
+          </div>
+        </div>
+        <div class="hero-aside">
+          <div class="hero-scene-card" id="hero-scene-card"></div>
+          <div class="hero-stats" id="hero-stats"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PERSON -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">家族人物</h2>
+        <p class="section-subtitle">認識這個家族的核心人物</p>
+      </div>
+      <div id="featured-person"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED STORIES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">家族故事</h2>
+        <p class="section-subtitle">每一個故事，都是家族精神的一部分</p>
+      </div>
+      <div id="featured-stories"></div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="stories.html" class="btn btn-primary">查看全部故事</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED VALUES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">家族價值</h2>
+        <p class="section-subtitle">從故事中累積出來的行動方式</p>
+      </div>
+      <div id="featured-values"></div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="values.html" class="btn btn-primary">查看全部價值</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>林志遠家族故事網站 &nbsp;|&nbsp; 示範專案 &nbsp;|&nbsp; <a href="about.html">關於本站</a></p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="回到頁首">↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
