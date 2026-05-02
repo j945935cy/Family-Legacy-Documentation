@@ -1,0 +1,192 @@
+.price-hero {
+  background:
+    linear-gradient(rgba(44, 76, 59, 0.76), rgba(44, 76, 59, 0.82)),
+    url("../images/ledger.png") center/cover;
+}
+
+.price-kicker {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.price-section {
+  padding-top: 64px;
+}
+
+.price-intro {
+  max-width: 720px;
+  margin-bottom: 34px;
+}
+
+.price-intro h2 {
+  color: var(--primary);
+  font-size: 1.55rem;
+  margin-bottom: 8px;
+}
+
+.price-intro p {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.price-intro span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 42px;
+}
+
+.pricing-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.pricing-card-featured {
+  border-color: rgba(212, 163, 115, 0.72);
+  box-shadow: 0 10px 30px rgba(44, 76, 59, 0.12);
+}
+
+.pricing-card-header {
+  padding: 28px 30px 24px;
+  background: #eef3ed;
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-card-featured .pricing-card-header {
+  background: linear-gradient(135deg, #2c4c3b 0%, #466c54 100%);
+}
+
+.plan-label {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.pricing-card-featured .plan-label {
+  color: #dce3da;
+}
+
+.pricing-card h3 {
+  color: var(--primary);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.pricing-card-featured h3 {
+  color: var(--accent);
+}
+
+.plan-details {
+  display: grid;
+  gap: 0;
+}
+
+.plan-details div {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 16px;
+  padding: 16px 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-details div:last-child {
+  border-bottom: 0;
+}
+
+.plan-details dt {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.plan-details dd {
+  color: var(--text);
+  font-size: 0.97rem;
+}
+
+.price-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+}
+
+.price-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  background: var(--card-bg);
+}
+
+.price-table caption {
+  padding: 18px 20px;
+  color: var(--primary);
+  font-weight: 700;
+  text-align: left;
+}
+
+.price-table th,
+.price-table td {
+  padding: 15px 18px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.price-table thead th {
+  background: #eef3ed;
+  color: var(--primary);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+.price-table tbody th {
+  color: var(--primary);
+}
+
+.price-table tbody td {
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .price-section {
+    padding-top: 48px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card-header {
+    padding: 24px 22px 20px;
+  }
+
+  .plan-details div {
+    grid-template-columns: 96px 1fr;
+    padding: 14px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-card h3 {
+    font-size: 1.65rem;
+  }
+
+  .plan-details div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

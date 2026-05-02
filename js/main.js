@@ -251,7 +251,9 @@ function renderPeople() {
     const related = familyStories.filter(s => s.people.includes(p.name));
     return `
       <div class="person-card">
-        <img src="${p.image}" alt="${p.name}" class="person-photo" onerror="if(this.src.indexOf('person-lin.svg')===-1){this.src='${p.imageFallback||p.image.replace(/\.png$/,'.svg')}';}"/>
+        <div class="person-photo avatar-box avatar-box-${p.id}">
+          <img src="${p.image}" alt="${p.name}" class="avatar person-photo-img-${p.id}" onerror="if(this.src.indexOf('person-lin.svg')===-1){this.src='${p.imageFallback||p.image.replace(/\.png$/,'.svg')}';}"/>
+        </div>
         <div class="person-info">
           <div class="person-name">${p.name}</div>
           <div class="person-english">${p.englishName}</div>
