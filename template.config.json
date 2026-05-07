@@ -1,0 +1,10 @@
+{
+  "_readme": "Run scripts/init.ps1 to initialize this template for a new family project.",
+  "familyName": "林志遠家族",
+  "siteTitle": "我們家的故事",
+  "siteFooter": "林志遠家族故事網站",
+  "author": "林志遠家族",
+  "githubRepo": "j945935cy/Family-Legacy-Documentation",
+  "themes": ["main", "apple", "dark", "purple"],
+  "pages": ["index", "stories", "people", "timeline", "values", "gallery", "about"]
+}

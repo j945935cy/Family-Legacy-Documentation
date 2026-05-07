@@ -105,3 +105,62 @@ family-legacy-demo/
 5. 儲存後等待網址產生（通常約 1 分鐘）
 
 > `.nojekyll` 檔案用來停用 GitHub Pages 的 Jekyll 預設處理，避免影響靜態檔案。
+
+---
+
+## 用此專案建立你自己的家族網站
+
+本專案同時是一份可重用的**家族網站範本**。
+
+### 快速啟動（3 步驟）
+
+```bash
+# 1. 在 GitHub 點「Use this template」或 Fork，取得你的副本
+# 2. Clone 至本地
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+
+# 3. 執行初始化腳本，輸入你的家族名稱等資訊
+.\scripts\init.ps1
+```
+
+腳本會自動將所有頁面、頁首、頁尾、標題中的「林志遠家族」等替換成你的家族名稱。
+
+### 初始化參數（可省略，直接互動輸入）
+
+```powershell
+.\scripts\init.ps1 `
+    -FamilyName "王家"      `
+    -SiteTitle  "我們家的故事" `
+    -Author     "王家族人"  `
+    -GitHubRepo "username/my-family" `
+    -ClearData               # 同時清空 data.js 為空白範例結構
+```
+
+### 初始化後的工作流程
+
+| 步驟 | 說明 |
+|------|------|
+| 填入資料 | 編輯 `js/data.js`，加入真實人物、故事、年表、價值 |
+| 換圖片 | 將圖片放入 `images/`，更新 `data.js` 的 `image` 欄位 |
+| 預覽 | `.\scripts\run.ps1` |
+| 發佈 | `.\scripts\publish.ps1 -Message "init: my family project"` |
+
+### 範本設定檔
+
+`template.config.json` 記錄目前的家族名稱等識別字串。  
+每次執行 `init.ps1` 後此檔案會自動更新，方便日後再次替換或核對。
+
+### 自動化腳本總覽
+
+| 腳本 | 用途 |
+|------|------|
+| `scripts/init.ps1` | **初始化**：把範本替換成新家族名稱 |
+| `scripts/run.ps1` | 本地預覽伺服器（自動開瀏覽器） |
+| `scripts/preview.ps1` | 指定主題/頁面開啟預覽 |
+| `scripts/publish.ps1` | git add → commit → push → 顯示網址 |
+| `scripts/build-epub.ps1` | 匯出 ePub 電子書（需安裝 pandoc） |
+| `scripts/export-pdf.ps1` | 匯出 PDF（需安裝 Edge 或 pandoc） |
+| `scripts/check-epub.ps1` | 驗證 ePub 檔案格式 |
+
+> 所有腳本均支援 `-Root` 參數，可從任意目錄呼叫，方便跨專案共用。

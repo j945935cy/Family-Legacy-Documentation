@@ -1,11 +1,51 @@
 # Scripts 使用說明
 
-本資料夾包含六支 PowerShell 腳本，用於開發、預覽、打包與發佈「林志遠家族故事」網站。
+本資料夾包含七支 PowerShell 腳本，用於初始化、開發、預覽、打包與發佈家族故事網站。
 
 > **執行前置條件**：在 PowerShell 中執行腳本需要先解除執行原則限制：
 > ```powershell
 > Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 > ```
+> 或直接雙擊根目錄的 `setup-executionpolicy.bat`
+
+---
+
+## init.ps1 — 初始化為新家族網站
+
+將範本中的「林志遠家族」等識別字串批次替換成你的家族名稱，讓你快速建立自己的家族網站。
+
+```powershell
+# 互動式（依提示輸入）
+.\scripts\init.ps1
+
+# 指定全部參數（不需互動）
+.\scripts\init.ps1 -FamilyName "王家" -SiteTitle "我們的故事" -GitHubRepo "username/repo"
+
+# 同時清空 data.js 為空白範例結構
+.\scripts\init.ps1 -FamilyName "王家" -ClearData
+
+# 預覽替換內容（不寫入任何檔案）
+.\scripts\init.ps1 -FamilyName "王家" -DryRun
+```
+
+**參數說明：**
+
+| 參數 | 說明 |
+|------|------|
+| `-FamilyName` | 新家族名稱，例如「王家」 |
+| `-SiteTitle` | 網站標題，例如「我們的故事」 |
+| `-Author` | 作者署名，預設同家族名稱 |
+| `-GitHubRepo` | GitHub repo，例如 `username/my-family` |
+| `-ClearData` | 重置 `js/data.js` 為空白範例結構 |
+| `-DryRun` | 預覽替換內容，不修改任何檔案 |
+| `-Root` | 指定專案根目錄（跨專案共用時使用） |
+
+**執行流程：**
+1. 讀取 `template.config.json` 取得目前識別字串
+2. 提示輸入新家族名稱等資訊
+3. 批次替換所有 `.html` 與 `js/data.js`
+4. 更新 `template.config.json`
+5. 選擇是否更新 git remote
 
 ---
 
