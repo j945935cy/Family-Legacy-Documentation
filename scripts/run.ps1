@@ -1,5 +1,5 @@
-﻿param([int]$Port = 8000)
-Set-Location (Split-Path $PSScriptRoot -Parent)
+﻿param([int]$Port = 8000, [string]$Root = "")
+if ($Root) { Set-Location $Root } else { Set-Location (Split-Path $PSScriptRoot -Parent) }
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) { Write-Host "[ERROR] Python not found." -ForegroundColor Red; exit 1 }
 $occ = netstat -ano | Select-String (":$Port ")
 if ($occ) { $Port++ }

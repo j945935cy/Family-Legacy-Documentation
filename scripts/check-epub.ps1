@@ -5,10 +5,11 @@
 
 param(
     [string]$EpubPath    = "dist\family-legacy.epub",
-    [string]$EpubCheckJar = ""   # If empty, auto-detect or fall back to basic check
+    [string]$EpubCheckJar = "",   # If empty, auto-detect or fall back to basic check
+    [string]$Root        = ""
 )
 
-Set-Location (Split-Path $PSScriptRoot -Parent)
+if ($Root) { Set-Location $Root } else { Set-Location (Split-Path $PSScriptRoot -Parent) }
 $Root = (Get-Location).Path
 
 Write-Host ""

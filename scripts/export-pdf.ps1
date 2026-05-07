@@ -10,10 +10,12 @@ param(
     [ValidateSet("auto", "edge", "pandoc")]
     [string]$Method = "auto",
 
-    [int]$Port = 8000
+    [int]$Port = 8000,
+
+    [string]$Root = ""
 )
 
-Set-Location (Split-Path $PSScriptRoot -Parent)
+if ($Root) { Set-Location $Root } else { Set-Location (Split-Path $PSScriptRoot -Parent) }
 $Root = (Get-Location).Path
 
 # Theme display name & output filename

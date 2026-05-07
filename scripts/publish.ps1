@@ -6,10 +6,11 @@
 param(
     [string]$Message = "",
     [string]$Branch  = "main",
-    [switch]$DryRun                    # Add -DryRun to preview only, without executing
+    [switch]$DryRun,                   # Add -DryRun to preview only, without executing
+    [string]$Root    = ""
 )
 
-Set-Location (Split-Path $PSScriptRoot -Parent)
+if ($Root) { Set-Location $Root } else { Set-Location (Split-Path $PSScriptRoot -Parent) }
 $Root = (Get-Location).Path
 
 Write-Host ""

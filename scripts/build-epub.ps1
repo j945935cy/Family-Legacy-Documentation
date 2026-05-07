@@ -5,10 +5,11 @@
 param(
     [string]$Title  = "Family Legacy Story",
     [string]$Author = "Lin Family",
-    [string]$Output = "dist\family-legacy.epub"
+    [string]$Output = "dist\family-legacy.epub",
+    [string]$Root   = ""
 )
 
-Set-Location (Split-Path $PSScriptRoot -Parent)
+if ($Root) { Set-Location $Root } else { Set-Location (Split-Path $PSScriptRoot -Parent) }
 $Root = (Get-Location).Path
 
 Write-Host ""

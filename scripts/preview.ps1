@@ -1,9 +1,10 @@
 ﻿param(
     [ValidateSet("main","apple","dark","purple")][string]$Theme = "main",
     [ValidateSet("index","stories","people","timeline","values","gallery","about")][string]$Page = "index",
-    [int]$Port = 8000
+    [int]$Port = 8000,
+    [string]$Root = ""
 )
-Set-Location (Split-Path $PSScriptRoot -Parent)
+if ($Root) { Set-Location $Root } else { Set-Location (Split-Path $PSScriptRoot -Parent) }
 $map = @{ main="Traditional"; apple="Apple"; dark="Dark Brown"; purple="Light Blue" }
 $base = if ($Theme -eq "main") { "" } else { "$Theme/" }
 $url = "http://localhost:$Port/$base$Page.html"
