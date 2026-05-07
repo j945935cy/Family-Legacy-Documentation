@@ -4,19 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>關於本站 — 林志遠家族</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../css/purple-style.css" />
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav class="p-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">林志遠家族</a>
-      <button class="hamburger" aria-label="選單" aria-expanded="false">
+      <a class="p-navbar-brand" href="index.html">林志遠家族</a>
+      <button class="p-hamburger" aria-label="選單" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <ul class="navbar-links">
+      <ul class="p-navbar-links">
         <li><a href="index.html">首頁</a></li>
         <li><a href="stories.html">家族故事</a></li>
         <li><a href="people.html">家族人物</a></li>
@@ -28,42 +26,42 @@
     </div>
   </nav>
 
-  <section class="page-hero">
+  <section class="p-page-hero">
     <div class="container">
       <h1>關於本站</h1>
       <p>這個網站的用途與背後的想法</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="p-section">
     <div class="container">
-      <div class="about-block">
+      <div class="p-about-block">
         <h2>這個網站是什麼？</h2>
         <p>
           本網站是一個家族故事紀錄示範專案。它不只是記錄姓名、年份與事件，而是把一個家庭如何面對困難、如何做選擇、如何留下價值觀的過程保存下來。
         </p>
-        <p style="margin-top:20px;">
+        <p style="margin-top:16px;">
           未來可以把虛擬人物替換成真實家人，把示範故事改成真正的家族記憶。這個模板的目的，是讓每個家庭都有機會把自己的故事好好說出來、傳下去。
         </p>
-        <hr style="margin:36px 0;border:none;border-top:1px solid var(--border);" />
+        <hr class="p-about-divider" />
         <h2>使用技術</h2>
-        <ul style="padding-left:20px;line-height:2;">
+        <ul style="margin-top:12px;">
           <li>HTML5</li>
           <li>CSS3（RWD 響應式設計）</li>
           <li>JavaScript（原生，無框架）</li>
           <li>可直接部署到 GitHub Pages</li>
         </ul>
-        <hr style="margin:36px 0;border:none;border-top:1px solid var(--border);" />
+        <hr class="p-about-divider" />
         <h2>如何使用這個模板？</h2>
         <p>編輯 <code>js/data.js</code> 即可新增或修改：</p>
-        <ul style="padding-left:20px;line-height:2;margin-top:12px;">
+        <ul style="margin-top:12px;">
           <li>新增故事：在 <code>familyStories</code> 陣列加入一筆物件</li>
           <li>新增人物：在 <code>familyPeople</code> 陣列加入一筆物件</li>
           <li>更換圖片：將圖片放入 <code>images/</code> 資料夾，並更新對應 <code>image</code> 欄位路徑</li>
         </ul>
-        <hr style="margin:36px 0;border:none;border-top:1px solid var(--border);" />
+        <hr class="p-about-divider" />
         <h2>部署到 GitHub Pages</h2>
-        <ol style="padding-left:20px;line-height:2.2;">
+        <ol style="margin-top:12px;">
           <li>建立 GitHub repository</li>
           <li>上傳所有檔案</li>
           <li>進入 Settings → Pages</li>
@@ -74,17 +72,23 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="p-footer">
     <div class="container">
       <p>林志遠家族故事網站 &nbsp;|&nbsp; 示範專案 &nbsp;|&nbsp; <a href="about.html">關於本站</a></p>
-      <p style="margin-top:8px;font-size:0.85rem;color:var(--text-light);">切換版本 → <a href="apple/about.html">Apple 版</a> | <a href="dark/about.html">深色版</a> | <a href="purple/about.html">淺藍版</a></p>
+      <p class="p-version-switch">
+        切換版本 → 
+        <a href="../about.html">傳統版</a> | 
+        <a href="../apple/about.html">Apple 版</a> | 
+        <a href="../dark/about.html">深棕版</a> | 
+        <a href="about.html">淺藍版</a>
+      </p>
     </div>
   </footer>
 
-  <button id="back-to-top" aria-label="回到頁首">↑</button>
+  <button id="p-back-to-top" aria-label="回到頁首">↑</button>
 
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/purple-main.js"></script>
 </body>
 </html>
 

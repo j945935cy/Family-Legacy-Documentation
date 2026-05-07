@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我們家的故事 — 林志遠家族</title>
+  <link rel="stylesheet" href="../css/purple-style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="p-navbar">
+    <div class="container">
+      <a class="p-navbar-brand" href="index.html">林志遠家族</a>
+      <button class="p-hamburger" aria-label="選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="p-navbar-links">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="stories.html">家族故事</a></li>
+        <li><a href="people.html">家族人物</a></li>
+        <li><a href="timeline.html">家族年表</a></li>
+        <li><a href="values.html">家族價值</a></li>
+        <li><a href="gallery.html">照片牆</a></li>
+        <li><a href="about.html">關於本站</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="p-hero">
+    <div class="container">
+      <div class="p-hero-layout">
+        <div class="p-hero-copy">
+          <div class="p-hero-kicker">家族故事示範網站</div>
+          <h1>我們家的故事</h1>
+          <p class="p-hero-subtitle">把記憶留下，把精神傳下去</p>
+          <p class="p-hero-narrative" id="p-hero-narrative"></p>
+          <div class="p-hero-quote-panel" id="p-hero-quote-panel"></div>
+          <div class="p-hero-buttons">
+            <a href="stories.html" class="p-btn p-btn-primary">閱讀家族故事</a>
+            <a href="people.html" class="p-btn p-btn-outline">認識家族人物</a>
+            <a href="timeline.html" class="p-btn p-btn-outline">查看家族年表</a>
+          </div>
+        </div>
+        <div class="p-hero-aside">
+          <div class="p-hero-scene-card" id="p-hero-scene-card"></div>
+          <div class="p-hero-stats" id="p-hero-stats"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PERSON -->
+  <section class="p-section">
+    <div class="container">
+      <div class="p-section-header">
+        <h2 class="p-section-title">家族人物</h2>
+        <p class="p-section-subtitle">認識這個家族的核心人物</p>
+      </div>
+      <div id="p-featured-person"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED STORIES -->
+  <section class="p-section p-section-alt">
+    <div class="container">
+      <div class="p-section-header">
+        <h2 class="p-section-title">家族故事</h2>
+        <p class="p-section-subtitle">每一個故事，都是家族精神的一部分</p>
+      </div>
+      <div id="p-featured-stories"></div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="stories.html" class="p-btn p-btn-primary">查看全部故事</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED VALUES -->
+  <section class="p-section">
+    <div class="container">
+      <div class="p-section-header">
+        <h2 class="p-section-title">家族價值</h2>
+        <p class="p-section-subtitle">從故事中累積出來的行動方式</p>
+      </div>
+      <div id="p-featured-values"></div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="values.html" class="p-btn p-btn-outline">查看全部價值</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="p-footer">
+    <div class="container">
+      <p>林志遠家族故事網站 &nbsp;|&nbsp; 示範專案 &nbsp;|&nbsp; <a href="about.html">關於本站</a></p>
+      <p class="p-version-switch">
+        切換版本 → 
+        <a href="../index.html">傳統版</a> | 
+        <a href="../apple/index.html">Apple 版</a> | 
+        <a href="../dark/index.html">深棕版</a> | 
+        <a href="index.html">淺藍版</a>
+      </p>
+    </div>
+  </footer>
+
+  <button id="p-back-to-top" aria-label="回到頁首">↑</button>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/purple-main.js"></script>
+</body>
+</html>
+
